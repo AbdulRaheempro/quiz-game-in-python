@@ -1,0 +1,39 @@
+questions = [
+    "What is the capital of Japan?",
+    "Who invented the telephone?",
+    "What is the largest ocean on Earth?",
+    "Which planet is known as the Red Planet?",
+    "Who is known as the 'Father of India'?"
+]
+
+options = [
+    ("A. Tokyo", "B. Kyoto", "C. Osaka", "D. Hokkaido"),
+    ("A. Alexander Graham Bell", "B. Thomas Edison", "C. Nikola Tesla", "D. Michael Faraday"),
+    ("A. Atlantic Ocean", "B. Indian Ocean", "C. Arctic Ocean", "D. Pacific Ocean"),
+    ("A. Earth", "B. Mars", "C. Venus", "D. Jupiter"),
+    ("A. Jawaharlal Nehru", "B. Mahatma Gandhi", "C. Subhas Chandra Bose", "D. Sardar Patel")
+]
+answers=("A","A","B","C","B")
+guesses=[]
+score=0
+qno=1
+
+for i,j in zip( questions,options):
+    print("------------------------------------------")
+    print(f"Q:{qno},{i}")
+    print(j) 
+    qno+=1
+    
+for k in range(len(questions)):
+    guess=input("Enter your answer:")
+    guesses.append(guess)
+    if guesses[k]==answers[k]:
+        print(f"corect answer of qno:{k+1}")
+        score+=1
+    else:
+        print(f"incorrect ans of qno :{k}")
+print(f"total score is {score}")
+        
+            
+    
+    
